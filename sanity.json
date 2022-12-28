@@ -12,14 +12,13 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "@sanity/production-preview"
+    "@sanity/production-preview",
+    "@sanity/code-input",
+    "@sanity/vision"
   ],
   "env": {
     "development": {
       "plugins": [
-        "@sanity/vision",
-        "@sanity/code-input",
-        "@sanity/production-preview"
       ]
     }
   },
