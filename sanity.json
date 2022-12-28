@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "project": {
+    "name": "filipblogsanity"
+  },
+  "api": {
+    "projectId": "vlh2p7u3",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/production-preview"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision",
+        "@sanity/code-input",
+        "@sanity/production-preview"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveProductionUrl.js" 
+    }
+  ]
+}
